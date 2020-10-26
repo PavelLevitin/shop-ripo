@@ -48,9 +48,13 @@ handleChange=(event)=>{
            required
            value={this.state.password} 
         /> 
- 
-         <CustomButton type="submit" value="submit form">SIGN IN</CustomButton>
-      <CustomButton onClick={signInWithGoogle}>{' '}SIGN IN with google{' '}</CustomButton>
+         <div className="buttons">
+          <CustomButton type="submit" value="submit form">SIGN IN</CustomButton>
+          <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+          SIGN IN with google
+          </CustomButton>
+         </div>
+        
 
       </form>
    </div>
