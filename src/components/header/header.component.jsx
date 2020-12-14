@@ -3,7 +3,10 @@ import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {auth} from  '../../firebase/firebase.utils';
 import "./header.styles.scss";
+
 import {ReactComponent as Logo} from "../../assets/crown.svg";
+import CartIcon from '../cart-icon/cart-icon.component'
+import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 
 
 const Header =({ currentUser })=>(
@@ -25,8 +28,11 @@ const Header =({ currentUser })=>(
      (<Link className='option' to='/signin'>sign in</Link>)
   }
   {currentUser ?(<div>Hello  {currentUser.displayName}</div>):(<div></div>)}
+  <CartIcon/>
   </div>
+  <CartDropdown/>
 </div>
+
 
 )
 
